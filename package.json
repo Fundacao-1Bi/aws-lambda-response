@@ -1,0 +1,23 @@
+{
+  "name": "@aprendizap/aws-lambda-responses",
+  "version": "0.1.0",
+  "description": "This module contains some wrappers to create the response object for AWS Lambda functions.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "aws",
+    "lambda"
+  ],
+  "author": "flaugusto",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fundacao-1Bi/aws-lambda-response.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fundacao-1Bi/aws-lambda-response/issues"
+  },
+  "homepage": "https://github.com/Fundacao-1Bi/aws-lambda-response#readme"
+}
