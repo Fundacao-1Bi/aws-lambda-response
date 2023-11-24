@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Fundacao-1Bi/aws-lambda-response/issues"
   },
-  "homepage": "https://github.com/Fundacao-1Bi/aws-lambda-response#readme"
+  "homepage": "https://github.com/Fundacao-1Bi/aws-lambda-response#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.10",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.2"
+  }
 }
