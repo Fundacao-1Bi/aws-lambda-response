@@ -2,7 +2,7 @@ import type { Config } from 'jest';
 
 const jestConfig: Config = {
   verbose: true,
-  collectCoverage: false,
+  collectCoverage: true,
   transform: { '^.+\\.tsx?$': 'ts-jest' },
   collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts', '!src/**/*.test.{ts,tsx}'],
   modulePathIgnorePatterns: ['mocks'],
