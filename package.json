@@ -1,6 +1,6 @@
 {
   "name": "@aprendizap/aws-lambda-responses",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "This module contains some wrappers to create the response object for AWS Lambda functions.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
