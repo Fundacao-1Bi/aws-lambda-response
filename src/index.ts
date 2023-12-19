@@ -64,6 +64,16 @@ const Responses = {
   },
 
   /**
+   * Generates a 401 Unauthorized response.
+   * @param message The error message.
+   * @param extraProps Additional properties to include in the response.
+   * @returns The 401 Unauthorized response.
+   */
+  _401(message = 'Unauthorized.', extraProps?: {}) {
+    return _errorResponse(401, message, extraProps);
+  },
+
+  /**
    * Generates a 403 Forbidden response.
    * @param message The error message.
    * @param extraProps Additional properties to include in the response.
