@@ -82,6 +82,21 @@ describe('Responses object', () => {
     expect(JSON.parse(res.body).message).toBe('There are missing or invalid parameters.');
   });
 
+  it('should return 401', () => {
+    const res = Responses._401('', data);
+    expect(res.statusCode).toBe(401);
+    expect(typeof res.body).toBe('string');
+    expect(res.headers['Access-Control-Allow-Origin']).toBe('*');
+  });
+
+  it('should return 401 with default message', () => {
+    const res = Responses._401();
+    expect(res.statusCode).toBe(401);
+    expect(typeof res.body).toBe('string');
+    expect(res.headers['Access-Control-Allow-Origin']).toBe('*');
+    expect(JSON.parse(res.body).message).toBe('Unauthorized.');
+  });
+
   it('should return 404', () => {
     const res = Responses._404('', data);
     expect(res.statusCode).toBe(404);
