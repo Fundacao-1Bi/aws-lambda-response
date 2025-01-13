@@ -127,6 +127,14 @@ describe('Responses object', () => {
     expect(JSON.parse(res.body).message).toBe('Forbidden.');
   });
 
+  it('should return 409 with default message', () => {
+    const res = Responses._409();
+    expect(res.statusCode).toBe(409);
+    expect(typeof res.body).toBe('string');
+    expect(res.headers['Access-Control-Allow-Origin']).toBe('*');
+    expect(JSON.parse(res.body).message).toBe('Conflict.');
+  });
+
   it('should return 500 with custom message', () => {
     const res = Responses._500('custom message');
     expect(res.statusCode).toBe(500);
@@ -141,6 +149,13 @@ describe('Responses object', () => {
     expect(typeof res.body).toBe('string');
     expect(res.headers['Access-Control-Allow-Origin']).toBe('*');
     expect(JSON.parse(res.body).message).toBe('Internal server error occurred.');
+  });
+
+  it('should return the custom status code', () => {
+    const res = Responses._custom(201, data);
+    expect(res.statusCode).toBe(201);
+    expect(typeof res.body).toBe('string');
+    expect(res.headers['Access-Control-Allow-Origin']).toBe('*');
   });
 
   const circularReferenceData = {};

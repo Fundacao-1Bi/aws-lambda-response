@@ -94,6 +94,16 @@ const Responses = {
   },
 
   /**
+   * Generates a 409 Conflict response.
+   * @param message The error message.
+   * @param extraProps Additional properties to include in the response.
+   * @returns The 409 Conflict response.
+   */
+  _409(message = 'Conflict.', extraProps?: {}) {
+    return _errorResponse(409, message, extraProps);
+  },
+
+  /**
    * Generates a 429 Too Many Requests response.
    * @param message The error message.
    * @param extraProps Additional properties to include in the response.
@@ -110,6 +120,13 @@ const Responses = {
    */
   _500(message = 'Internal server error occurred.') {
     return _errorResponse(500, message);
+  },
+
+  _custom(statusCode: number, data = {}, error = false) {
+    return _defineResponse(statusCode, {
+      error,
+      ...data,
+    });
   },
 };
 
